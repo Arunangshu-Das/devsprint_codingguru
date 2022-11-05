@@ -1,5 +1,6 @@
 import mediapipe as mp
 import cv2
+import numpy as np
 
 mp_drawing=mp.solutions.drawing_utils
 mp_pose=mp.solutions.pose
@@ -15,6 +16,9 @@ def calculate_angle(a,b,c):
         angle=360-angle
     return angle
 
+left_hand_side = 0
+right_hand_side = 0
+
 
 
 cap=cv2.VideoCapture(0)
@@ -23,9 +27,11 @@ while cap.isOpened():
     cv2.imshow('Detection model',frame)
     image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     image.flags.writeable = False
+    results=pose.process()
 
-
-
+    image.flags.writeable=True
+    image=cv2.cvtColor(image,cv2.COLOR_RGB2BGR)
+    
 
     #Pose detection
 
