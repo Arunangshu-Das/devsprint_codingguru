@@ -30,7 +30,6 @@ model = load_model('mp_hand_gesture')
 f = open('gesture.names', 'r')
 classNames = f.read().split('\n')
 f.close()
-print(classNames)
 
 counter = 0
 left_stage = None
@@ -142,7 +141,7 @@ with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as 
                                                          circle_radius=2))  # connection color
 
 
-        cv2.imshow('Arunangshu Das', image)
+        cv2.imshow('Coding Guru', image)
         if cv2.waitKey(10) & 0xFF == ord('q'):
             break
 cap.release()
