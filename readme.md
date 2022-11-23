@@ -9,7 +9,7 @@ explore more about the topic
 
 ## Team members
 <li>Arunangshu Das</li> 
-<li>Anik Bhattacharya</li>
+<li>Anik Bhattacharya :)</li>
 <li>Ankita Burman</li>
 <li>Shikha Soni</li>
 
